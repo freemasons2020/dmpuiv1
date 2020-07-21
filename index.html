@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <title>Digital Mortgage Porting</title>
+  </head>
+  <body>
+    <div class="container" id="step1container">
+      <div class="row">
+        <div class="col s12">
+          <div id="add-card" class="card">
+            <div id="add-card-content1" class="card-content">
+              <span class="card-title" id="bdc">
+                <b>Your Existing Mortgage Account</b>&nbsp;
+                <!--
+                <a class="modal-trigger" href="#add_help_modal"></a>
+                  <i class="material-icons">info</i>
+                </a>
+                -->
+              </span>
+              <!-- Modal Structure 
+              <div id="add_help_modal" class="modal">
+                <div class="modal-content">
+                  <h4>Help</h4>
+                  <hr>
+                  <p>
+                    <ul>All the information in the form are needed to start the process:
+                      <li>&nbsp;&nbsp;- At the least, an email id or phone number is mandatory</li>
+                      <li>&nbsp;&nbsp;- The email id should be in valid format (xxx@xxxx.xxx, xxx.xxx@xxxx.xxx)</li>
+                    </ul>
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <a href="javascript:modalClose();" class="modal-close btn">Close</a>
+                </div>
+              </div>
+              -->
+              <div class="row" id="step1">
+                <form id="customer-details-form">
+                  <!--
+                  <div class="input-field col s12">
+                    <input type="text" name="ui-first-name" id="uiFname" />
+                    <label for="ui-first-name">First Name</label>
+                  </div>
+                  <div class="input-field col s12">
+                    <input type="text" name="ui-last-name" id="uiLname" />
+                    <label for="ui-last-name">Last Name</label>
+                  </div>
+                  <div class="input-field col s12">
+                    <input
+                      type="email"
+                      name="ui-email"
+                      id="uiEmail"
+                      class="validate"
+                    />
+                    <label for="ui-email-address">Email Address</label>
+                  </div>
+                  <div class="input-field col s12">
+                    <input type="text" name="ui-phone" id="uiPhone" />
+                    <label for="ui-phone">Phone Number</label>
+                  </div>
+                  -->
+                  <div class="input-field col s12">
+                    <input type="text" name="ui-sortcode" id="uiSortCode" />
+                    <label for="ui-sortcode">Sort Code</label>
+                  </div>
+                  <div class="input-field col s12">
+                    <input
+                      type="text"
+                      name="ui-mortgage-number"
+                      id="uiMortgageNumber"
+                    />
+                    <label for="ui-mortgage-number">Mortgage Number</label>
+                  </div>
+                  <input
+                    type="submit"
+                    value="Get Mortgage Details"
+                    class="btn purple darken-3"
+                    id="get-mortgage-btn"
+                  />
+                </form>
+              </div>
+              <!--
+              <div class="row">
+                <div class="input-field col s12">
+                  <table
+                    class="table-mortgage-details"
+                    id="table-mortgage-details"
+                  >
+                    <tbody id="mortgage-details-body"></tbody>
+                  </table>
+                </div>
+              </div>
+              -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="step2container">
+      <div class="row">
+        <div class="col s12">
+          <div class="card" id="mortgage-details">
+            <div id="add-card-content2" class="card-content">
+              <span class="card-title"
+                ><b>Your Existing Mortgage Details</b></span
+              >
+              <div class="row">
+                <div class="input-field col s12">
+                  <table
+                    class="table-mortgage-details striped"
+                    id="table-mortgage-details"
+                  >
+                    <tbody id="mortgage-details-body"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="step3container">
+      <div class="row">
+        <div class="col s12">
+          <div class="card" id="mortgage-details">
+            <div id="add-card-content3" class="card-content">
+              <span class="card-title"
+                ><b>Your Mortgage Porting Request</b></span
+              >
+              <div class="row">
+                <div id="row-request" class="input-field col s12"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

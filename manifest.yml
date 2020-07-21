@@ -1,0 +1,8 @@
+---
+applications:
+  - name: dmpui
+    memory: 1G
+    instances: 1
+    random-route: true
+    buildpacks:
+      - https://github.com/cloudfoundry/staticfile-buildpack.git
