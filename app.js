@@ -11,7 +11,7 @@ function modalClose() {
 
 class DigiMortgagePorter {
   constructor(url) {
-    this.url = "https://dmpapi-bold-reedbuck.cfapps.io";
+    this.url = "give the url of dmpapi";
     //this.url = "http://127.0.0.1:8080";
   }
 
