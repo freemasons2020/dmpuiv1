@@ -1,14 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-  var elems = document.getElementById("add_help_modal");
-  var instances = M.Modal.init(elems);
-});
-
-function modalClose() {
-  var elems = document.getElementById("add_help_modal");
-  var instances = M.Modal.init(elems);
-  instances.close();
-}
-
 class DigiMortgagePorter {
   constructor(url) {
     this.url = "give the url of dmpapi";
@@ -61,7 +50,6 @@ document
 function getMortgageDetails(e) {
   const sortcode = document.getElementById("uiSortCode").value.trim();
   const mortgageno = document.getElementById("uiMortgageNumber").value.trim();
-  //card_content.innerHTML = "";
   mort_dtls_tbody.innerHTML = "";
   objDigiMortgagePorter
     .getMortgageDetails(sortcode, mortgageno)
@@ -103,7 +91,7 @@ function displayMortDetails(data) {
     tr3.appendChild(td3l);
     const td3d = document.createElement("td");
     td3d.id = "td3d";
-    td3d.appendChild(document.createTextNode(mortgage.cust1Name));
+    td3d.appendChild(document.createTextNode(mortgage.cust2Name));
     tr3.appendChild(td3d);
     mort_dtls_tbody.appendChild(tr3);
 
@@ -218,6 +206,15 @@ function displayMortDetails(data) {
     mort_dtls_tbody.appendChild(tr13);
   });
 
+  const trb = document.createElement("tr");
+  const tdbl = document.createElement("td");
+  tdbl.appendChild(document.createTextNode(""));
+  trb.appendChild(tdbl);
+  const tdbd = document.createElement("td");
+  tdbd.appendChild(document.createTextNode(""));
+  trb.appendChild(tdbd);
+  mort_dtls_tbody.appendChild(trb);
+
   const tr14 = document.createElement("tr");
   tr14.id = "tr14";
   const td14l = document.createElement("td");
@@ -310,6 +307,12 @@ function createMortgagePortingRequest(e) {
     });
 
   const cardContent = document.getElementById("row-request");
-  cardContent.innerHTML = `<span class="card-title"><b>${requestid} has been created</b>`;
+
+  if (default12mnths == "N") {
+    cardContent.innerHTML = `<span class="card-title purple-text text-darken-3">Your mortgage porting request has been accepted.<br>The request number is <b>${requestid}</b>. You can reach out to us for progress on this request.</span>`;
+  } else {
+    cardContent.innerHTML = `<span class="card-title purple-text text-darken-3">Your mortgage porting request has been logged.<br>The request number is <b>${requestid}</b>. We will reach out to you for more information on your mortgage soon.</span>`;
+  }
+
   e.preventDefault();
 }
