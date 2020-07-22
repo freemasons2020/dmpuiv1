@@ -1,6 +1,6 @@
 Digital Mortgage Porter UI
 --------------------------
-This app is an user interface for the API - dmpapi (https://github.com/freemasons2020/dmpui.git
+This app is an user interface for the API - dmpapi (https://github.com/freemasons2020/dmpapi.git)
 
 Source Code
 -----------
